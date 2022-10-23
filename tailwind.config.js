@@ -1,0 +1,102 @@
+const colors = require('tailwindcss/colors')
+
+module.exports = {
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  darkMode: 'class',
+  theme: {
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      black: "#000",
+      white: "#fff",
+      bluegray: colors.blueGray,
+      coolgray: colors.coolGray,
+      gray: colors.gray,
+      truegray: colors.trueGray,
+      warmgray: colors.warmGray,
+      red: colors.red,
+      orange: colors.orange,
+      amber: colors.amber,
+      yellow: colors.yellow,
+      lime: colors.lime,
+      green: colors.green,
+      emerald: colors.emerald,
+      teal: colors.teal,
+      cyan: colors.cyan,
+      sky: colors.sky,
+      blue: colors.blue,
+      indigo: colors.indigo,
+      violet: colors.violet,
+      purple: colors.purple,
+      fuchsia: colors.fuchsia,
+      pink: colors.pink,
+      rose: colors.rose,
+      'blue-ribbon': {
+        '50': '#edfaff',
+        '100': '#d7f1ff',
+        '200': '#b7e8ff',
+        '300': '#86dcff',
+        '400': '#4dc7ff',
+        '500': '#24a9ff',
+        '600': '#0d8aff',
+        '700': '#066ee7',
+        '800': '#0c5bc1',
+        '900': '#114f97',
+      },
+      'dodger-blue': {
+        '50': '#effaff',
+        '100': '#def3ff',
+        '200': '#b6eaff',
+        '300': '#75dbff',
+        '400': '#2ccaff',
+        '500': '#06bbff',
+        '600': '#0090d4',
+        '700': '#0072ab',
+        '800': '#00608d',
+        '900': '#065074',
+      },      
+    },
+    fontFamily: {
+      display: ['Nunito', 'sans-serif'],
+      body: ['Nunito', 'sans-serif'],
+    },
+    extend: {
+      fontSize: {
+        14: '14px',
+      },
+      backgroundColor: {
+        'main-bg': '#FAFBFB',
+        'main-dark-bg': '#20232A',
+        'secondary-dark-bg': '#33373E',
+        'light-gray': '#F7F7F7',
+        'half-transparent': 'rgba(0, 0, 0, 0.5)',
+      },
+      borderWidth: {
+        1: '1px',
+      },
+      borderColor: {
+        color: 'rgba(0, 0, 0, 0.1)',
+      },
+      width: {
+        400: '400px',
+        760: '760px',
+        780: '780px',
+        800: '800px',
+        1000: '1000px',
+        1200: '1200px',
+        1400: '1400px',
+      },
+      height: {
+        80: '80px',
+      },
+      minHeight: {
+        590: '590px',
+      },
+      backgroundImage: {
+        'hero-pattern':
+          "url('https://demos.wrappixel.com/premium-admin-templates/react/flexy-react/main/static/media/welcome-bg-2x-svg.25338f53.svg')",
+      },
+    },
+  },
+  plugins: [],
+};

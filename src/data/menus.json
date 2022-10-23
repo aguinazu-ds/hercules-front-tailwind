@@ -1,0 +1,184 @@
+[
+    {
+        "title": "EDICIÓN",
+        "icon": "HiFolderOpen",
+        "childrens": [
+            {
+                "title": "Representantes Legales",
+                "path": "representantes-legales"
+            },
+            {
+                "title": "Empresas",
+                "path": "empresas"
+            },
+            {
+                "title": "Indicadores Previsionales",
+                "path": "indicadores-previsionales"
+            },
+            {
+                "title": "Previsión de Salud",
+                "path": "prevision-salud"
+            },
+            {
+                "title": "Haberes",
+                "path": "prevision-salud"
+            },
+            {
+                "title": "Descuentos",
+                "path": "prevision-salud"
+            },
+            {
+                "title": "Centros de costo",
+                "path": "prevision-salud"
+            },
+            {
+                "title": "Sección/Área",
+                "path": "prevision-salud"
+            },
+            {
+                "title": "Cargos",
+                "path": "prevision-salud"
+            },
+            {
+                "title": "Jornadas laborales",
+                "path": "prevision-salud"
+            },
+            {
+                "title": "Horas extra",
+                "path": "prevision-salud"
+            },
+            {
+                "title": "Trabajadores",
+                "path": "prevision-salud"
+            },
+            {
+                "title": "Contratos",
+                "path": "prevision-salud"
+            },
+            {
+                "title": "Causales de término de contrato",
+                "path": "Grupos de sindicatos"
+            },
+            {
+                "title": "Movimientos de personal",
+                "path": "prevision-salud"
+            },
+            {
+                "title": "IPS (Ex INP)",
+                "path": "prevision-salud"
+            }
+        ]
+    },
+    {
+        "title": "PARÁMETROS",
+        "icon": "GoSettings",
+        "childrens": [
+            {
+                "title": "Configuración",
+                "path": "/"
+            },
+            {
+                "title": "Factores de Actualización",
+                "path": "/"
+            }
+        ]
+    },
+    {
+        "title": "MOVIMIENTOS",
+        "icon": "TbArrowsDownUp",
+        "childrens": [
+            {
+                "title": "Haberes y Descuentos",
+                "path": "/"
+            },
+            {
+                "title": "Descuento en cuotas",
+                "path": "/"
+            },
+            {
+                "title": "Ingreso créditos CCAF",
+                "path": "/"
+            },
+            {
+                "title": "Ingreso cargas familiares",
+                "path": "/"
+            },
+            {
+                "title": "Cálculo de liquidación",
+                "path": "/"
+            },
+            {
+                "title": "Impresión de liquidaciones",
+                "path": "/"
+            }
+        ]
+    },
+    {
+        "title": "HERRAMIENTAS",
+        "icon": "FaToolbox",
+        "childrens": [
+            {
+                "title": "Libro de remuneraciones",
+                "path": "/"
+            },
+            {
+                "title": "Certificado de sueldo",
+                "path": "/"
+            },
+            {
+                "title": "Declaración de rentas",
+                "path": "/"
+            },
+            {
+                "title": "Nómina de trabajadores",
+                "path": "/"
+            },
+            {
+                "title": "Archivos planos",
+                "path": "/"
+            },
+            {
+                "title": "Finiquitos empresa",
+                "path": "/"
+            },
+            {
+                "title": "Eliminar liquidación calculada",
+                "path": "/"
+            },
+            {
+                "title": "Cerrar o abrir mes en proceso",
+                "path": "/"
+            },
+            {
+                "title": "Importar licencias",
+                "path": "/"
+            }
+        ]
+    },
+    {
+        "title": "INFORMES",
+        "icon": "SiGooglesheets",
+        "childrens": [
+            {
+                "title": "Haberes y Descuentos",
+                "path": "informes-haberes-descuentos"
+            },
+            {
+                "title": "LRE para gratificación legal",
+                "path": "/"
+            },
+            {
+                "title": "Detalle pago imposiciones",
+                "path": "/"
+            },
+            {
+                "title": "Resumen pago imposiciones",
+                "path": "/"
+            },
+            {
+                "title": "Detalle cargas familiares y créditos",
+                "path": "/"
+            }
+        ]
+    }
+]
