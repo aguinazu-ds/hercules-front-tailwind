@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { RiNotification3Line } from 'react-icons/ri';
 import { MdKeyboardArrowDown } from 'react-icons/md';
-import { FaUser } from 'react-icons/fa';
+import { FaUser, FaUserCircle } from 'react-icons/fa';
 import { Notification, UserProfile } from '.'
 import { useStateContext } from '../contexts/ContextProvider';
 
 const NavButton = ({ customFunc, icon, color, dotColor }) => (
-  <button type='button' onClick={customFunc} style={{ color }} className="relative text-xl rounded-full p-3 hover:bg-light-gray">
+  <button type='button' onClick={customFunc} style={{ color }} className="relative text-xl rounded-xl p-3 hover:bg-light-gray">
     <span style={{ background: dotColor }} className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2" />
       {icon}
     {/* </span> */}
@@ -37,7 +37,7 @@ const Navbar = () => {
   },[screenSize, setActiveMenu]);
 
   return (
-    <div className='flex justify-between p-2 md:mx-6 realtive'>
+    <div className='flex justify-between p-2 md:mx-6 relative'>
       <NavButton 
         customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
         color="blue" 
@@ -50,11 +50,13 @@ const Navbar = () => {
           color="blue" 
           icon={<RiNotification3Line />} 
         />
-        <NavButton
-          customFunc={() => handleClick('userProfile')}
-          color="blue" 
-          icon={<FaUser />} 
-        />
+        <div className='p-3 flex hover:bg-light-gray rounded-xl' onClick={() => handleClick('userProfile')}>
+          <FaUserCircle className='text-2xl text-blue-ribbon-800 mt-1'/>
+          <span className='pl-2 text-gray-700 text-xs'>
+            <p>aeguinazu@gmail.com</p>
+            <p>Admin</p>
+          </span>
+        </div>
         {isClicked.notification && <Notification />}
         {isClicked.userProfile && <UserProfile />}
       </div>

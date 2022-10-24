@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './App.css'
@@ -30,7 +30,7 @@ const App = () => {
                     <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
                         <Navbar />
                     </div>
-                    <div>
+                    <div className='overflow-auto h-[calc(100vh_-_4.5rem)]'>
                         <Routes>
                             <Route path='/' element= "Home" />
 
