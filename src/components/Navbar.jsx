@@ -51,7 +51,7 @@ const Navbar = () => {
           icon={<RiNotification3Line />} 
         />
         <div className='p-3 flex hover:bg-light-gray rounded-xl' onClick={() => handleClick('userProfile')}>
-          <FaUserCircle className='text-2xl text-blue-ribbon-800 mt-1'/>
+          <FaUserCircle className='text-2xl mt-1' style={{color: 'blue'}}/>
           <span className='pl-2 text-gray-700 text-xs'>
             <p>aeguinazu@gmail.com</p>
             <p>Admin</p>
