@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import DataTable from '../components/Datatable';
-import DATA from '../data/MOCK_DATA.json';
+import DATA from '../data/MOCK_DATA1.json';
 import SortingTable from '../components/SortingTable';
 import ColumnFilter from '../components/ColumnFilter'
 
