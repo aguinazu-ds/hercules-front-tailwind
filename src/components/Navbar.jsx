@@ -1,16 +1,14 @@
 import React, { useEffect } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { RiNotification3Line } from 'react-icons/ri';
-import { MdKeyboardArrowDown } from 'react-icons/md';
-import { FaUser, FaUserCircle } from 'react-icons/fa';
+import { FaUserCircle } from 'react-icons/fa';
 import { Notification, UserProfile } from '.'
 import { useStateContext } from '../contexts/ContextProvider';
 
 const NavButton = ({ customFunc, icon, color, dotColor }) => (
-  <button type='button' onClick={customFunc} style={{ color }} className="relative text-xl rounded-xl p-3 hover:bg-light-gray">
-    <span style={{ background: dotColor }} className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2" />
+  <button type='button' onClick={customFunc} style={{ color }} className="relative text-xl rounded-full p-3 hover:bg-light-gray">
+    <span style={{ background: dotColor }} className="absolute inline-flex rounded-full h-2 w-2 right-2 top-4" />
       {icon}
-    {/* </span> */}
   </button>
 ) 
 

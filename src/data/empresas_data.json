@@ -1,0 +1,101 @@
+[
+    {
+        "rut": "61966129-K",
+        "razonSocial": "Razon Social Test",
+        "id": 1,
+        "apellidoPatRepresentanteLegal": "Paterno Test 2",
+        "apellidoMatRepresentanteLegal": "Materno Test 2",
+        "giro": "Giro test",
+        "nombreRepresentanteLegal": "Representante Empresa test 2"
+    },
+    {
+        "rut": "93452863-8",
+        "razonSocial": "Razon Social Test2",
+        "id": 2,
+        "apellidoPatRepresentanteLegal": "Paterno Test 2",
+        "apellidoMatRepresentanteLegal": "Materno Test 2",
+        "giro": "Giro test2",
+        "nombreRepresentanteLegal": "Representante Empresa test 2"
+    },
+    {
+        "rut": "97846178-6",
+        "razonSocial": "Razon Social Test2",
+        "id": 3,
+        "apellidoPatRepresentanteLegal": "Paterno Test 2",
+        "apellidoMatRepresentanteLegal": "Materno Test 2",
+        "giro": "Giro test2",
+        "nombreRepresentanteLegal": "Representante Empresa test 2"
+    },
+    {
+        "rut": "78965003-9",
+        "razonSocial": "Razon Social Test2",
+        "id": 4,
+        "apellidoPatRepresentanteLegal": "Paterno Test 2",
+        "apellidoMatRepresentanteLegal": "Materno Test 2",
+        "giro": "Giro test2",
+        "nombreRepresentanteLegal": "Representante Empresa test 2"
+    },
+    {
+        "rut": "84848014-2",
+        "razonSocial": "Razon Social Test2",
+        "id": 5,
+        "apellidoPatRepresentanteLegal": "Paterno Test 2",
+        "apellidoMatRepresentanteLegal": "Materno Test 2",
+        "giro": "Giro test2",
+        "nombreRepresentanteLegal": "Representante Empresa test 2"
+    },
+    {
+        "rut": "77325352-8",
+        "razonSocial": "Razon Social Test2",
+        "id": 6,
+        "apellidoPatRepresentanteLegal": "Paterno Test 2",
+        "apellidoMatRepresentanteLegal": "Materno Test 2",
+        "giro": "Giro test2",
+        "nombreRepresentanteLegal": "Representante Empresa test 2"
+    },
+    {
+        "rut": "70449844-6",
+        "razonSocial": "Razon Social Test2",
+        "id": 7,
+        "apellidoPatRepresentanteLegal": "Paterno Test 2",
+        "apellidoMatRepresentanteLegal": "Materno Test 2",
+        "giro": "Giro test2",
+        "nombreRepresentanteLegal": "Representante Empresa test 2"
+    },
+    {
+        "rut": "63362544-1",
+        "razonSocial": "Razon Social Test2",
+        "id": 8,
+        "apellidoPatRepresentanteLegal": "Paterno Test 2",
+        "apellidoMatRepresentanteLegal": "Materno Test 2",
+        "giro": "Giro test2",
+        "nombreRepresentanteLegal": "Representante Empresa test 2"
+    },
+    {
+        "rut": "57389659-9",
+        "razonSocial": "Razon Social Test2",
+        "id": 9,
+        "apellidoPatRepresentanteLegal": "Paterno Test 2",
+        "apellidoMatRepresentanteLegal": "Materno Test 2",
+        "giro": "Giro test2",
+        "nombreRepresentanteLegal": "Representante Empresa test 2"
+    },
+    {
+        "rut": "54644590-9",
+        "razonSocial": "Razon Social Test2",
+        "id": 10,
+        "apellidoPatRepresentanteLegal": "Paterno Test 2",
+        "apellidoMatRepresentanteLegal": "Materno Test 2",
+        "giro": "Giro test2",
+        "nombreRepresentanteLegal": "Representante Empresa test 2"
+    },
+    {
+        "rut": "74991418-1",
+        "razonSocial": "Razon Social Test2",
+        "id": 11,
+        "apellidoPatRepresentanteLegal": "Paterno Test 2",
+        "apellidoMatRepresentanteLegal": "Materno Test 2",
+        "giro": "Giro test2",
+        "nombreRepresentanteLegal": "Representante Empresa test 2"
+    }
+]

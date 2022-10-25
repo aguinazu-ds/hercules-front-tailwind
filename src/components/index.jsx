@@ -1,6 +1,6 @@
 export { default as Navbar } from './Navbar'
 export { default as Sidebar } from './Sidebar'
-export { default as Datatable } from './Datatable'
+export { default as DataTable } from './DataTable'
 export { default as UserProfile } from './UserProfile'
 export { default as Notification } from './Notification'
 export { default as SidebarItem } from './SidebarItem'

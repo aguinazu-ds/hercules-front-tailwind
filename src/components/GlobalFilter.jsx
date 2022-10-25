@@ -10,7 +10,7 @@ const GlobalFilter = ({ filter, setFilter }) => {
   return (
     <span className=''>
         {/* Search:{' '} */}
-        <input className='appearance-none' value={value || ""} onChange={(e) => {
+        <input className='appearance-none border-b-1 focus:outline-none mr-3 pl-1' value={value || ""} placeholder=" Buscar ..." onChange={(e) => {
             setValue(e.target.value)
             onChange(e.target.value)
         }} />

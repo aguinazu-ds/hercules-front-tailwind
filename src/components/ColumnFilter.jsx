@@ -9,13 +9,13 @@ const ColumnFilter = ({ column }) => {
     }, 400)
 
   return (
-    <span className=''>
+    <>
         {/* Search:{' '} */}
-        <input className='appearance-none' value={value || ""} onChange={(e) => {
+        <input className='w-full' value={value || ""} placeholder=" Filtrar..." onChange={(e) => {
             setValue(e.target.value)
             onChange(e.target.value)
         }} />
-    </span>
+    </>
   )
 }
 
