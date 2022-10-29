@@ -1,20 +1,17 @@
 import React, {useMemo} from 'react'
-import { useTable, useSortBy, useGlobalFilter, useFilters, usePagination } from 'react-table'
+import { useTable, useSortBy, useGlobalFilter, useFilters, usePagination, useRowSelect } from 'react-table'
 import { TbArrowsSort, TbSortAscending, TbSortDescending } from 'react-icons/tb'
 import GlobalFilter from './GlobalFilter'
 import { BsDownload } from 'react-icons/bs';
 import { BiSearch } from 'react-icons/bi';
-import { MdArrowBackIos, MdArrowForwardIos, MdLastPage, MdFirstPage } from 'react-icons/md'
+import { MdArrowBackIos, MdArrowForwardIos, MdLastPage, MdFirstPage, MdEdit } from 'react-icons/md'
 
 
 const DataTable = ({ col, tableData }) => {
+    // eslint-disable-next-line
     const columns = useMemo(() => col, [])
     const data = useMemo(() => [...tableData], [tableData])
-
-    // const tableInstance = useTable({
-    //     columns,
-    //     data
-    // }, useFilters, useGlobalFilter, useSortBy, usePagination)
+    // const data = useMemo(() => tableData, [])
 
     const { 
         getTableProps, 
@@ -35,7 +32,7 @@ const DataTable = ({ col, tableData }) => {
     } = useTable({
         columns,
         data
-    }, useFilters, useGlobalFilter, useSortBy, usePagination)
+    }, useFilters, useGlobalFilter, useSortBy, usePagination, useRowSelect)
 
     const { pageIndex, pageSize } = state
 
@@ -58,14 +55,16 @@ const DataTable = ({ col, tableData }) => {
             <div className='h-fix overflow-auto border-x-1 border-t-1 '>
                 <table {...getTableProps()} className='w-full bg-white rounded-lg'>
                     <thead className='text-left sticky top-0 bg-gray-200'>
-                        {
-                            headerGroups.map(headerGroup => (
+                        {headerGroups.map((headerGroup) => {
+                            const { key, ...restHeaderGroup } = headerGroup.getHeaderGroupProps();
+                            return (
                                 <>
-                                    <tr {...headerGroup.getHeaderGroupProps()} className="h-10 flex-auto">
-                                        {
-                                            headerGroup.headers.map(column => (
+                                    <tr {...restHeaderGroup} className="h-10 flex-auto">
+                                        {headerGroup.headers.map((column) => {
+                                            const {key, ...restColumn} = column.getHeaderProps(column.getSortByToggleProps());
+                                            return (
                                                 <>
-                                                <th {...column.getHeaderProps(column.getSortByToggleProps())} key={column.index} className="py-2 px-4">
+                                                <th  {...restColumn} className="py-2 px-4">
                                                     <div className='flex'>
                                                         <span className=''>
                                                             {column.render('Header')}
@@ -76,31 +75,37 @@ const DataTable = ({ col, tableData }) => {
                                                     </div>
                                                 </th>
                                                 </>
-                                            ))
+                                            );
                                         }
+                                    )}
+                                        <th className='px-3'>Acción</th>
                                     </tr>
                                     <tr {...headerGroup.getHeaderGroupProps()} className="h-10">
-                                        {
-                                            headerGroup.headers.map(column => (
-                                                <th {...column.getHeaderProps()} className="pl-4 pb-4">
+                                        {headerGroup.headers.map(column => {
+                                            const {key, ...restColumn} = column.getHeaderProps();
+                                            return (
+                                                <th {...restColumn} className="pl-4 pb-4">
                                                     <div className='w-fit pr-4'>
                                                         {column.canFilter ? column.render('Filter') : null}
                                                     </div>
                                                 </th>
-                                            ))
-                                        }
-
+                                            )
+                                        })}
+                                        <th></th>
                                     </tr>
+
+                                    
                                 </>
-                            ))
-                        }
+                            )
+                        }      
+            )}
                     </thead>
                     <tbody {...getTableBodyProps()} className="h-full">
                         {
                             page.map(row => {
                                 prepareRow(row)
                                 return (
-                                    <tr {...row.getRowProps()} className="group bg-white border-b h-12 transition duration-100 ease-in-out hover:bg-gray-100">
+                                    <tr {...row.getRowProps()} onClick={() => { console.log(' row click ', row); }} className="group bg-white border-b h-12 transition duration-100 ease-in-out hover:bg-gray-100">
                                         {
                                             row.cells.map(cell => {
                                                 return <td {...cell.getCellProps} className="py-2 px-4 text-14 font-normal">
@@ -108,6 +113,9 @@ const DataTable = ({ col, tableData }) => {
                                                 </td>
                                             })
                                         }
+                                        <td className='mx-6'>
+                                        <MdEdit className='ml-6 text-2xl hidden group-hover:block group-hover:cursor-pointer'/>
+                                        </td>
                                     </tr>
                                 )
                             })
@@ -116,8 +124,8 @@ const DataTable = ({ col, tableData }) => {
                 </table>
             </div>
             <div className=' border-x-1 border-b-1 rounded-b-md h-14 flex bg-white'>
-                <div className='ml-auto py-4'>
-                    Filas por página
+                <div className='ml-auto py-4 flex'>
+                    <p className='hidden sm:block'>Filas por página</p>
                     <select name="" id="" className='ml-2 bg-white border rounded-sm' value={pageSize} onChange={e => setPageSize(Number(e.target.value))}>
                         {
                             [10, 20, 30, 40, 50].map(pageSize => (
@@ -128,7 +136,7 @@ const DataTable = ({ col, tableData }) => {
                         }
                     </select>
                 </div>
-                <div className='p-4 mr-'>
+                <div className='hidden sm:block p-4'>
                     Página{' '}
                     {pageIndex + 1} de {pageOptions.length}
                 </div>

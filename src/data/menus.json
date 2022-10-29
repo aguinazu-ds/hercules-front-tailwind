@@ -5,7 +5,7 @@
         "childrens": [
             {
                 "title": "Representantes Legales",
-                "path": "representantes-legales"
+                "path": "edicion/representantes-legales"
             },
             {
                 "title": "Empresas",
@@ -13,59 +13,59 @@
             },
             {
                 "title": "Indicadores Previsionales",
-                "path": "indicadores-previsionales"
+                "path": "edicion/indicadores-previsionales"
             },
             {
                 "title": "Previsión de Salud",
-                "path": "prevision-salud"
+                "path": "edicion/prevision-salud"
             },
             {
                 "title": "Haberes",
-                "path": "prevision-salud"
+                "path": "edicion/prevision-salud"
             },
             {
                 "title": "Descuentos",
-                "path": "prevision-salud"
+                "path": "edicion/prevision-salud"
             },
             {
                 "title": "Centros de costo",
-                "path": "prevision-salud"
+                "path": "edicion/prevision-salud"
             },
             {
                 "title": "Sección/Área",
-                "path": "prevision-salud"
+                "path": "edicion/prevision-salud"
             },
             {
                 "title": "Cargos",
-                "path": "prevision-salud"
+                "path": "edicion/prevision-salud"
             },
             {
                 "title": "Jornadas laborales",
-                "path": "prevision-salud"
+                "path": "edicion/prevision-salud"
             },
             {
                 "title": "Horas extra",
-                "path": "prevision-salud"
+                "path": "edicion/prevision-salud"
             },
             {
                 "title": "Trabajadores",
-                "path": "prevision-salud"
+                "path": "edicion/prevision-salud"
             },
             {
                 "title": "Contratos",
-                "path": "prevision-salud"
+                "path": "edicion/prevision-salud"
             },
             {
                 "title": "Causales de término de contrato",
-                "path": "Grupos de sindicatos"
+                "path": "edicion/Grupos de sindicatos"
             },
             {
                 "title": "Movimientos de personal",
-                "path": "prevision-salud"
+                "path": "edicion/prevision-salud"
             },
             {
                 "title": "IPS (Ex INP)",
-                "path": "prevision-salud"
+                "path": "edicion/prevision-salud"
             }
         ]
     },
