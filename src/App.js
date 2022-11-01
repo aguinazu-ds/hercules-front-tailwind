@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './App.css'
-import { Navbar, Sidebar, Layout } from './components';
+import { Layout } from './components';
 import { LandingPage ,Empresas, Login } from './pages';
 
 import { useStateContext } from './contexts/ContextProvider';

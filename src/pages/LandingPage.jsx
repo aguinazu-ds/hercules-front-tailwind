@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { GiAbstract014 } from 'react-icons/gi';
 
 const LandingPage = () => {
@@ -8,9 +9,11 @@ const LandingPage = () => {
             <div className='flex justify-center items-center h-full'>
                 <span className='mr-2 text-blue-ribbon-700 text-4xl'><GiAbstract014 /></span>
                 <span className='mr-auto text-black text-3xl font-bold '> Hércules</span>
-                <button class="bg-blue-ribbon-700 text-white active:bg-blue-ribbon-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">
-                    Ingreso
-                </button>
+                <Link to={'/login'}>
+                    <button class="bg-blue-ribbon-700 text-white active:bg-blue-ribbon-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">
+                        Ingreso
+                    </button>
+                </Link>
             </div>
         </div>
         <div className='mx-28 h-[50vh] flex'>

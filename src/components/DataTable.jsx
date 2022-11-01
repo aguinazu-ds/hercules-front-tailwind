@@ -114,7 +114,7 @@ const DataTable = ({ col, tableData }) => {
                                             })
                                         }
                                         <td className='mx-6'>
-                                        <MdEdit className='ml-6 text-2xl hidden group-hover:block group-hover:cursor-pointer'/>
+                                        <MdEdit className='ml-6 text-2xl group-hover:cursor-pointer text-green-600'/>
                                         </td>
                                     </tr>
                                 )
