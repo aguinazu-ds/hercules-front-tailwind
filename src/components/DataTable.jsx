@@ -5,13 +5,13 @@ import GlobalFilter from './GlobalFilter'
 import { BsDownload } from 'react-icons/bs';
 import { BiSearch } from 'react-icons/bi';
 import { MdArrowBackIos, MdArrowForwardIos, MdLastPage, MdFirstPage, MdEdit } from 'react-icons/md'
+import { useStateContext } from '../contexts/ContextProvider';
 
-
-const DataTable = ({ col, tableData }) => {
+const DataTable = ({ col, tableData, onRowClick }) => {
     // eslint-disable-next-line
     const columns = useMemo(() => col, [])
     const data = useMemo(() => [...tableData], [tableData])
-    // const data = useMemo(() => tableData, [])
+    const { setRowData } = useStateContext();
 
     const { 
         getTableProps, 
@@ -105,7 +105,7 @@ const DataTable = ({ col, tableData }) => {
                             page.map(row => {
                                 prepareRow(row)
                                 return (
-                                    <tr {...row.getRowProps()} onClick={() => { console.log(' row click ', row); }} className="group bg-white border-b h-12 transition duration-100 ease-in-out hover:bg-gray-100">
+                                    <tr {...row.getRowProps()} onClick={() => setRowData(row)} className="group bg-white border-b h-12 transition duration-100 ease-in-out hover:bg-gray-100">
                                         {
                                             row.cells.map(cell => {
                                                 return <td {...cell.getCellProps} className="py-2 px-4 text-14 font-normal">

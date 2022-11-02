@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Modal({ isVisible, onClose }) {
+export default function Modal({ isVisible, onClose, modalData }) {
     if (!isVisible) {
         return null;
     }

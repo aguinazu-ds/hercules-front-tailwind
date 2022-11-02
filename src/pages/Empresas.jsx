@@ -3,9 +3,14 @@ import DataTable from '../components/DataTable';
 import ColumnFilter from '../components/ColumnFilter';
 import Empresa from '../api/services/Empresa';
 import NuevaEmpresa from '../components/empresas/NuevaEmpresa';
+import { useStateContext } from '../contexts/ContextProvider';
 
 const Empresas = () => {
   const rutEmpresa = '76494210'
+
+  const { rowData } = useStateContext();
+
+
 
   const COLUMNS = [
     {
@@ -27,6 +32,9 @@ const Empresas = () => {
     {
         Header: 'Giro',
         accessor: 'giro',
+        Cell: ({ value }) => {
+           return value + ' Cell Test'
+        },
         Filter: ColumnFilter
     },
     {
@@ -73,7 +81,7 @@ const Empresas = () => {
         <button onClick={() => setShowModalNuevaEmpresa(true)} className="mt-3 ml-6 bg-sky-500 text-white active:bg-sky-600 font-bold uppercase text-sm px-4 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
           Nueva Empresa
         </button>
-        <NuevaEmpresa isVisible={showModalNuevaEmpresa} onClose={() => setShowModalNuevaEmpresa(false)} />
+        <NuevaEmpresa isVisible={showModalNuevaEmpresa} onClose={() => setShowModalNuevaEmpresa(false)} modalData={rowData} />
       </div>
     </div>
     
