@@ -1,4 +1,4 @@
-import React, {useMemo} from 'react'
+import React, {useMemo, useState} from 'react'
 import { useTable, useSortBy, useGlobalFilter, useFilters, usePagination, useRowSelect } from 'react-table'
 import { TbArrowsSort, TbSortAscending, TbSortDescending } from 'react-icons/tb'
 import GlobalFilter from './GlobalFilter'
@@ -6,12 +6,15 @@ import { BsDownload } from 'react-icons/bs';
 import { BiSearch } from 'react-icons/bi';
 import { MdArrowBackIos, MdArrowForwardIos, MdLastPage, MdFirstPage, MdEdit } from 'react-icons/md'
 import { useStateContext } from '../contexts/ContextProvider';
+import EditarEmpresa from '../components/empresas/EditarEmpresa';
 
 const DataTable = ({ col, tableData, onRowClick }) => {
     // eslint-disable-next-line
     const columns = useMemo(() => col, [])
     const data = useMemo(() => [...tableData], [tableData])
+    const { rowData } = useStateContext();
     const { setRowData } = useStateContext();
+    const [showModalEditarEmpresa, setShowModalEditarEmpresa] = useState(false);
 
     const { 
         getTableProps, 
@@ -105,7 +108,7 @@ const DataTable = ({ col, tableData, onRowClick }) => {
                             page.map(row => {
                                 prepareRow(row)
                                 return (
-                                    <tr {...row.getRowProps()} onClick={() => setRowData(row)} className="group bg-white border-b h-12 transition duration-100 ease-in-out hover:bg-gray-100">
+                                    <tr {...row.getRowProps()} onClick={() => {setRowData(row.original)}} className="group bg-white border-b h-12 transition duration-100 ease-in-out hover:bg-gray-100">
                                         {
                                             row.cells.map(cell => {
                                                 return <td {...cell.getCellProps} className="py-2 px-4 text-14 font-normal">
@@ -114,7 +117,7 @@ const DataTable = ({ col, tableData, onRowClick }) => {
                                             })
                                         }
                                         <td className='mx-6'>
-                                        <MdEdit className='ml-6 text-2xl group-hover:cursor-pointer text-green-600'/>
+                                        <MdEdit className='ml-6 text-2xl group-hover:cursor-pointer text-green-600' onClick={() => setShowModalEditarEmpresa(true)}/>
                                         </td>
                                     </tr>
                                 )
@@ -155,6 +158,7 @@ const DataTable = ({ col, tableData, onRowClick }) => {
                     </button>
                 </div>
             </div>
+            <EditarEmpresa isVisible={showModalEditarEmpresa} onClose={() => setShowModalEditarEmpresa(false)} modalData={rowData} />
         </>
     )
 }

@@ -8,10 +8,6 @@ import { useStateContext } from '../contexts/ContextProvider';
 const Empresas = () => {
   const rutEmpresa = '76494210'
 
-  const { rowData } = useStateContext();
-
-
-
   const COLUMNS = [
     {
         Header: 'Id',
@@ -56,6 +52,7 @@ const Empresas = () => {
 
   const [empresas, setEmpresas] = useState([]);
   const [showModalNuevaEmpresa, setShowModalNuevaEmpresa] = useState(false);
+  const { rowData } = useStateContext();
 
   const fetchData = async () => {
     const response = await Empresa.getAll(rutEmpresa);
