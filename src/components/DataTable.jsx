@@ -8,7 +8,7 @@ import { MdArrowBackIos, MdArrowForwardIos, MdLastPage, MdFirstPage, MdEdit } fr
 import { useStateContext } from '../contexts/ContextProvider';
 import EditarEmpresa from '../components/empresas/EditarEmpresa';
 
-const DataTable = ({ col, tableData, onRowClick }) => {
+const DataTable = ({ col, tableData, onRowClick, botonEditar }) => {
     // eslint-disable-next-line
     const columns = useMemo(() => col, [])
     const data = useMemo(() => [...tableData], [tableData])
@@ -81,7 +81,7 @@ const DataTable = ({ col, tableData, onRowClick }) => {
                                             );
                                         }
                                     )}
-                                        <th className='px-3'>Acción</th>
+                                        {botonEditar && <th className='px-3'>Acción</th>}
                                     </tr>
                                     <tr {...headerGroup.getHeaderGroupProps()} className="h-10">
                                         {headerGroup.headers.map(column => {
@@ -94,7 +94,7 @@ const DataTable = ({ col, tableData, onRowClick }) => {
                                                 </th>
                                             )
                                         })}
-                                        <th></th>
+                                        {botonEditar && <th></th>}
                                     </tr>
 
                                     
@@ -116,9 +116,11 @@ const DataTable = ({ col, tableData, onRowClick }) => {
                                                 </td>
                                             })
                                         }
-                                        <td className='mx-6'>
-                                        <MdEdit className='ml-6 text-2xl group-hover:cursor-pointer text-green-600' onClick={() => setShowModalEditarEmpresa(true)}/>
-                                        </td>
+                                        {botonEditar && 
+                                            <td className='mx-6'>
+                                            <MdEdit className='ml-6 text-2xl group-hover:cursor-pointer text-green-600' onClick={() => setShowModalEditarEmpresa(true)}/>
+                                            </td>
+                                        }
                                     </tr>
                                 )
                             })

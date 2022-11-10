@@ -72,13 +72,13 @@ const Empresas = () => {
         Empresas
       </div>
       <div className='h-full rounded-lg mx-6 pt-5'>
-        <DataTable col={COLUMNS} tableData={empresas} />
+        <DataTable col={COLUMNS} tableData={empresas} botonEditar={false} />
       </div>
       <div>
         <button onClick={() => setShowModalNuevaEmpresa(true)} className="mt-3 ml-6 bg-sky-500 text-white active:bg-sky-600 font-bold uppercase text-sm px-4 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
           Nueva Empresa
         </button>
-        <NuevaEmpresa isVisible={showModalNuevaEmpresa} onClose={() => setShowModalNuevaEmpresa(false)} modalData={rowData} />
+        <NuevaEmpresa isVisible={showModalNuevaEmpresa} onClose={() => setShowModalNuevaEmpresa(false)}/>
       </div>
     </div>
     
